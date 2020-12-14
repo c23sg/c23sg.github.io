@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>wheel of fortune</title>
+
+    <style type="text/css"> 
+
+
+                 #spinner{
+                    width:200px;
+                    height:200px;
+                    background-color: lightblue;
+                    background-image:url(wheel.gif);
+                background-size:contain;
+                 }
+
+                 body{
+                  background-size:cover;
+                  background-image: url(https://media4.giphy.com/media/455d2kt9kZeBr5yQGL/giphy.gif);
+
+                 }
+
+            </style> 
+
+        </head> 
+
+        <body>   
+
+            <div id="spinner"></div>
+
+
+            <script type="text/javascript">  
+
+
+
+              var spinner = document.getElementById("spinner");    
+
+
+               spinner.addEventListener("click", function(){ 
+                var random = Math.random();
+                console.log(random);
+                spinner.style.backgroundImage = "url(1.png)";
+
+               })
+
+
+               document.addEventListener("click", function(){ 
+                var random = Math.round(Math.random()*6);
+                console.log(random);
+                document.body.style.backgroundImage = "url("+random+".png)";
+
+               })  
+
+
+           </script>   
+
+       </body> 
+
+       </html> 

@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+    body {
+        background-image: url(https://c.stocksy.com/a/hvR200/z9/584021.jpg);
+        background-size: contain;
+        margin: 0;
+    }
+
+    .text {
+        width: 300px;
+        height: 100px;
+        margin: 5px;
+        color: white;
+        position:relative;
+        display:inline-block;
+        font-size:30px;
+        font-family: 'Swanky and Moo Moo', cursive;
+
+    }
+    </style>
+</head>
+
+<body>
+
+    <script type="text/javascript">
+    function makeDiv() {
+        let writing = document.createElement('div');
+        document.body.appendChild(writing);
+        writing.classList.add('text');
+        writing.innerText = "I want mac n cheese."
+
+
+    };
+
+    // setInterval(makeDiv, 500);
+
+    for (var i=0; i<5000; i=i+1) { 
+    	makeDiv()};
+
+
+    </script>
+</body>
+
+</html>
