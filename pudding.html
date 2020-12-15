@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+
+
+<style type="text/css">
+	.jello{
+
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			background-image: url("jello.png");
+			background-size: contain;
+			display: inline-block;
+			transition:  0.5s;
+	}
+
+
+</style>
+
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+	for (var i = 0; i < 100; i++){
+		var jello = document.createElement("div");
+		document.body.appendChild(jello);
+		jello.className += jello.className ? ' jello' : 'jello';
+		makeJello(jello);
+	}
+
+	function makeJello(jello){
+		jello.style.left = Math.random()*750 + "px";
+	    jello.style.top = Math.random()*600 + "px";
+	    setTimeout(makeJello, 1000, jello); 
+	}
+</script>
+
+
+</body>
+</html>
