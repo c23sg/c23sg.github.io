@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style type="text/css">
+    #candies {
+        width: 1000px;
+        height: 800px;
+        background-color: lightpink;
+    }
+
+    #button {
+        width: 170px;
+        height: 150px;
+        background-size: contain;
+        background-image: url("button.png");
+    }
+
+    #text {
+        position: relative;
+        font-size: 50px;
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="candies">
+        <div id="button"></div>
+        <div id="text"></div>
+    </div>
+    <script type="text/javascript">
+    var array = ["Are you French? Because Eiffel for you.", "Is your name Google? Because you have everything i've been searching for.", "Life without you is like a broken pencil...pointless", "We're not socks, but I think we'd make a great pair", "Do you know CPR? Because you are taking my breath away!", "You must be tired because you've been running through my mind all night.", "Are you a bank loan? Because you got my interest."];
+
+
+    var text = document.getElementById('text');
+
+    var button = document.getElementById('button');
+
+
+    button.addEventListener("click",
+        function() {
+            var rando = Math.round(Math.random() * 6);
+
+            text.innerText = array[rando];
+        });
+    </script>
+</body>
+
+</html>
